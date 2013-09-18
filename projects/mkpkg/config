@@ -1,0 +1,8 @@
+git_url: https://github.com/boklm/mkpkg
+compress_tar: xz
+commit_gpg_id: 1B678A63
+summary: Tool to generate packages from a git repository, using templates
+description: |
+  mkpkg is a tool to generate some packages from a git repository, using
+  package templates.
+url: https://github.com/boklm/mkpkg
