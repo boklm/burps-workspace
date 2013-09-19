@@ -1,0 +1,9 @@
+git_url: https://git.torproject.org/tor.git
+compress_tar: xz
+version_command: perl -ne 'if (m/^Changes in version ([^-]+)-.*$/) { print "$1\n"; exit }' < ChangeLog
+copy_files:
+  - tor.logrotate
+  - tor.init
+  - tor.sysconfig
+  - tor.service
+  - tor-tmpfiles.conf
