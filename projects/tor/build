@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+tar xvf [% project %]-[% c('version') %].tar.[% c('compress_tar') %]
+cd [% project %]-[% c('version') %]
+./autogen.sh
+./configure
+make -j 4
+mkdir build-[% project %]-[% c('version') %]
+make DESTDIR=$(pwd)/build-[% project %]-[% c('version') %] install
+dest_file="[% dest_dir %]/build-[% project %]-[% c('version') %].tar.xz"
+tar cvJf "$dest_file" build-[% project %]-[% c('version') %]
+echo "Created $dest_file"
