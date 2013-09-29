@@ -6,3 +6,4 @@ description: |
   mkpkg is a tool to generate some packages from a git repository, using
   package templates.
 url: https://github.com/boklm/mkpkg
+gpg_keyring: mageia.gpg

@@ -6,3 +6,4 @@ description: |
   Tool to generate Mageia advisories emails and pages on
   http://advisories.mageia.org/.
 url: http://advisories.mageia.org/
+gpg_keyring: mageia.gpg
