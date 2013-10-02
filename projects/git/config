@@ -1,0 +1,8 @@
+git_url: https://github.com/git/git
+git_hash: maint
+version: "[% c('describe/tag').substr(1) %]"
+copy_files:
+ - 0001-send-email-improve-SSL-certificate-verification.patch
+ - 93git-branch.sh
+ - 93git-env.sh
+ - gitweb.conf

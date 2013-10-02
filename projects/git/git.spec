@@ -1,18 +1,19 @@
+[%- PROCESS pkg_rel.spec -%]
 
 %define libname %mklibname git
 %define profile_branch 93git-branch.sh
 %define profile_env    93git-env.sh
 
 Name:    git
-Version: 1.8.4
-Release: %mkrel 1
+Version: [% c('version') %]
+Release: [% d.rel_macro %] [% rel %]
 Epoch:   1
 
 Summary: Global Information Tracker
 License: GPLv2
 Group:   Development/Other
 Url:     http://git-scm.com/
-Source0: http://git-core.googlecode.com/files/git-%{version}.tar.gz
+Source0: http://git-core.googlecode.com/files/git-%{version}.tar.xz
 # Source1: http://www.kernel.org/pub/software/scm/git/git-%{version}.tar.bz2.sign
 Source2: gitweb.conf
 Source3: %{profile_branch}
