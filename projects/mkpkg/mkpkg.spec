@@ -3,13 +3,13 @@ Name:           [% project %]
 Version:        [% c('version') %]
 Release:        [% d.rel_macro %] [% rel %]
 Source:         %{name}-%{version}.tar.[% c('compress_tar') %]
-Summary:        [% p.summary %]
-URL:            [% p.url %]
+Summary:        [% c('summary') %]
+URL:            [% c('url') %]
 License:        CC0
 Group:          Text tools
 BuildArch:      noarch
 %description
-[% p.description -%]
+[% c('description') -%]
 
 %prep
 %setup -q
