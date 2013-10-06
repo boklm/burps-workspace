@@ -7,3 +7,54 @@ description: |
   package templates.
 url: https://github.com/boklm/mkpkg
 gpg_keyring: mageia.gpg
+maintainer: Nicolas Vigier <boklm@mars-attacks.org>
+debian_revision: |
+  [%-
+        IF c('pkg_rel');
+                GET c('pkg_rel');
+        ELSIF c('describe/tag_reach');
+                GET '0.' _ c('describe/tag_reach') _ '~g' _ c('describe/hash');
+        ELSE;
+                GET '1';
+        END;
+  -%]
+debian_files:
+ - name: source/format
+   content : 3.0 (quilt)
+ - name: compat
+   content: 8
+ - name: docs
+   content: |
+    NEWS
+    README.md
+ - name: control
+   content: |
+    Source: mkpkg
+    Section: devel
+    Priority: extra
+    Maintainer: [% c('maintainer') %]
+    Build-Depends: debhelper (>= 8.0.0)
+    Standards-Version: 3.9.3
+    Homepage: https://github.com/boklm/mkpkg
+    Vcs-Git: https://github.com/boklm/mkpkg
+    Vcs-Browser: https://github.com/boklm/mkpkg
+
+    Package: mkpkg
+    Architecture: all
+    Depends: ${misc:Depends}, ${perl:Depends}, libyaml-libyaml-perl,
+             libtemplate-perl, libio-captureoutput-perl, libfile-slurp-perl
+    Description: [% c('summary') %]
+     [%- FILTER indent(1) %]
+     [%- c('description') %]
+     [% END %]
+ - name: copyright
+   content: '[% INCLUDE debian_copyright %]'
+ - name: changelog
+   content: |
+    mkpkg ([% c('version') %]-[% c('debian_revision') %]) unstable; urgency=low
+
+      * [% exec('git show --format=format:%s -s ' _ c('git_hash') _ '^{commit}') %]
+
+     -- [% exec('git show --format=format:"%an <%ae>" -s ' _ c('git_hash') _ '^{commit}') %]  [% USE date; date.format(c('timestamp'), "%a, %d %b %Y %T") %] +0000
+ - name: rules
+   content: '[% INCLUDE debian_rules %]'
