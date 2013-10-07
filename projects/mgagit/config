@@ -1,0 +1,3 @@
+git_url: git://git.mageia.org/software/infrastructure/mgagit
+gpg_keyring: mageia.gpg
+tag_gpg_id: 1
