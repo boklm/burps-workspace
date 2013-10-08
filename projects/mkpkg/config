@@ -8,16 +8,6 @@ description: |
 url: https://github.com/boklm/mkpkg
 gpg_keyring: mageia.gpg
 maintainer: Nicolas Vigier <boklm@mars-attacks.org>
-debian_revision: |
-  [%-
-        IF c('pkg_rel');
-                GET c('pkg_rel');
-        ELSIF c('describe/tag_reach');
-                GET '0.' _ c('describe/tag_reach') _ '~g' _ c('describe/hash');
-        ELSE;
-                GET '1';
-        END;
-  -%]
 debian_files:
  - name: source/format
    content : 3.0 (quilt)
