@@ -1,4 +1,3 @@
-[%- PROCESS pkg_rel.spec -%]
 
 %define libname %mklibname git
 %define profile_branch 93git-branch.sh
@@ -6,7 +5,7 @@
 
 Name:    git
 Version: [% c('version') %]
-Release: [% d.rel_macro %] [% rel %]
+Release: [% d.rel_macro %] [% c('rpm_rel') %]
 Epoch:   1
 
 Summary: Global Information Tracker

@@ -1,7 +1,6 @@
-[%- PROCESS pkg_rel.spec -%]
 Name:           [% project %]
 Version:        [% c('version') %]
-Release:        [% d.rel_macro %] [% rel %]
+Release:        [% d.rel_macro %] [% c('rpm_rel') %]
 Source:         %{name}-%{version}.tar.[% c('compress_tar') %]
 Summary:        [% c('summary') %]
 URL:            [% c('url') %]

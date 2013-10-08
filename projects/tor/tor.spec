@@ -1,4 +1,3 @@
-[%- PROCESS pkg_rel.spec -%]
 %define runuser toruser
 %define _tmpfilesdir /usr/lib/tmpfiles.d
 %define _tmpfilescreate() echo %{1}
@@ -6,7 +5,7 @@
 
 Name:		tor
 Version:	[% c('version') %]
-Release:	[% d.rel_macro %] [% rel %]
+Release:	[% d.rel_macro %] [% c('rpm_rel') %]
 Summary:	Anonymizing overlay network for TCP (The onion router)
 URL:		http://www.torproject.org/
 Group:		Networking/Other

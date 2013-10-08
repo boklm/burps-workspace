@@ -1,7 +1,6 @@
-[% PROCESS pkg_rel.spec -%]
 Name:           mgagit
 Version:        [% c('version') %]
-Release:        [% d.rel_macro %] [% rel %]
+Release:        [% d.rel_macro %] [% c('rpm_rel') %]
 Source:         %{name}-%{version}.tar.xz
 Summary:        Tool to generate Mageia advisories pages and emails
 URL:            http://gitweb.mageia.org/software/infrastructure/mgagit/about/
