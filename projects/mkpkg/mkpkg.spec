@@ -23,3 +23,11 @@ BuildArch:      noarch
 %doc README.md COPYING
 %{_bindir}/%{name}
 %{perl_vendorlib}/MkPkg.pm
+[% IF c('timestamp') >= 1381244225 -%]
+%{perl_vendorlib}/MkPkg/DefaultConfig.pm
+[% END -%]
+[% IF c('timestamp') >= 1381356133 -%]
+%{_mandir}/man1/mkpkg.1*
+%{_mandir}/man1/mkpkg-*.1*
+%{_mandir}/man7/mkpkg_*.7*
+[% END -%]
