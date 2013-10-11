@@ -23,7 +23,7 @@ debian_files:
     Section: devel
     Priority: extra
     Maintainer: [% c('maintainer') %]
-    Build-Depends: debhelper (>= 8.0.0)
+    Build-Depends: debhelper (>= 8.0.0), asciidoc, libxml2-utils, xmlto
     Standards-Version: 3.9.3
     Homepage: https://github.com/boklm/mkpkg
     Vcs-Git: https://github.com/boklm/mkpkg
@@ -32,7 +32,8 @@ debian_files:
     Package: mkpkg
     Architecture: all
     Depends: ${misc:Depends}, ${perl:Depends}, libyaml-libyaml-perl,
-             libtemplate-perl, libio-captureoutput-perl, libfile-slurp-perl
+             libtemplate-perl, libio-captureoutput-perl, libfile-slurp-perl,
+             libstring-shellquote-perl, libsort-versions-perl
     Description: [% c('summary') %]
      [%- FILTER indent(1) %]
      [%- c('description') %]

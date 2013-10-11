@@ -6,6 +6,7 @@ Summary:        [% c('summary') %]
 URL:            [% c('url') %]
 License:        CC0
 Group:          Text tools
+BuildRequires:  asciidoc
 BuildArch:      noarch
 %description
 [% c('description') -%]
