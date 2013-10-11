@@ -1,5 +1,5 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: mkpkg
+Upstream-Name: burps
 Source: https://github.com/boklm/mkpkg
 
 Files: *
