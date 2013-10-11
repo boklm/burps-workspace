@@ -1,7 +1,7 @@
 This repository contains some package templates and configuration.
-It is intended to be used with [mkpkg][mkpkg].
+It is intended to be used with [burps][burps].
 
-[mkpkg]: https://github.com/boklm/mkpkg
+[burps]: http://burps.boklm.eu/
 
 It contains the following directories :
 
