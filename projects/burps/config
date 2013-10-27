@@ -42,7 +42,7 @@ debian_files:
    content: '[% INCLUDE debian_copyright %]'
  - name: changelog
    content: |
-    burps ([% c('version') %]-[% c('debian_revision') %]) unstable; urgency=low
+    burps ([% c('version') %]-[% c('debian_revision') %]) [% c('lsb_release/codename') %]; urgency=low
 
       * [% exec('git show --format=format:%s -s ' _ c('git_hash') _ '^{commit}') %]
 
