@@ -33,7 +33,7 @@ debian_files:
     Architecture: all
     Depends: ${misc:Depends}, ${perl:Depends}, libyaml-libyaml-perl,
              libtemplate-perl, libio-captureoutput-perl, libfile-slurp-perl,
-             libstring-shellquote-perl, libsort-versions-perl
+             libstring-shellquote-perl, libsort-versions-perl, libdata-dump-perl
     Description: [% c('summary') %]
      [%- FILTER indent(1) %]
      [%- c('description') %]
