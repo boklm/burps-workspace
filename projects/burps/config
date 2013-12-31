@@ -25,9 +25,9 @@ debian_files:
     Maintainer: [% c('maintainer') %]
     Build-Depends: debhelper (>= 8.0.0), asciidoc, libxml2-utils, xmlto
     Standards-Version: 3.9.3
-    Homepage: https://github.com/boklm/mkpkg
-    Vcs-Git: https://github.com/boklm/mkpkg
-    Vcs-Browser: https://github.com/boklm/mkpkg
+    Homepage: http://burps.boklm.eu/
+    Vcs-Git: https://github.com/boklm/burps
+    Vcs-Browser: https://github.com/boklm/burps
 
     Package: burps
     Architecture: all
